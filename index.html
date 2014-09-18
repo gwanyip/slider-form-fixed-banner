@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <title>Sliding out form from fix bottom bar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <div class="container">
+            <p><img src="img/ronb.jpg"></p>
+        </div>
+        <div class="hearthero-form">
+
+            <div class="hearthero-form-title-container">
+                <div class="hearthero-form-title">
+                    <h3>Got a story to share&#63; Send it to us and you might see it on this page&#33;</h3>
+                    <button id="hearhero-form-btn" class="hearthero-form-title-btn-open"></button>
+                </div>
+            </div><!-- End .hearthero-form-title-container -->
+
+            <div class="hearthero-form-body-container">
+                <div class="hearthero-form-body">
+                    <div id="heartFormSuccess" class="hearthero-form-success">
+                        <div class="hearthero-form-success-title">
+                            <h2>Thank you for submitting your story&#33;</h2>
+                            <h2>We&#39;ll review your story and get back to you.</h2>
+                        </div>
+                        <div class="hearthero-form-success-btns">
+                            <button id="successBtnClose" class="hearthero-form-success-close" alt="close"></button>
+                            <button id="successBtnAnother" class="hearthero-form-success-another" alt="submit annother story"></button>
+                        </div>
+                    </div>
+                    <form id="heartform" class="heartheroform" method="post" action="">
+                        <fieldset>
+                            <div class="left-col">
+                                <div class="hearthero-form-name">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="user_name" required>
+                                </div><!-- End .hearthero-form-name -->
+
+                                <div class="hearthero-form-email">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="user_email" required>
+                                </div><!-- End .hearthero-form-name -->
+
+                                <div class="hearthero-form-application">
+                                    <label>Application</label>
+                                    <div class="hearthero-form-application-border">
+                                        <div class="hearthero-form-application-teacher">
+                                            <label for="teacher_app"><input type="radio" id="teacher_app" value="teacher_app" name="application"><span>Teacher</span></label>
+                                        </div>
+                                        <div class="hearthero-form-application-student">
+                                            <label for="student_app"><input type="radio" id="student_app" value="student_app" name="application"><span>Student</span></label>
+                                        </div>
+                                    </div><!-- End .hearthero-form-application-border -->
+                                </div><!-- End .hearthero-form-application -->
+                            </div><!-- End four columns -->
+                            
+                            <div class="right-col">
+                                <div class="hearthero-form-story">
+                                    <label for="heart_story">Your story</label>
+                                    <textarea id="heart_story" name="user_story" required></textarea>
+                                </div><!-- End .hearthero-form-story -->
+
+                                <div class="hearthero-form-img">
+                                    <label>Attach an image <span>&#40;Maximum file size 100MB&#41;</span></label>
+                                    <label for="img_upload"><input type="file" id="img_upload" name="user_img" accept="image/*"><span></span></label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <button type="submit" id="agree_submit" alt="agree to terms &amp; submit"></button>
+                            <a href="#" class="agree_terms">Terms of Agreement</a>
+                            <!-- SVG loader -->
+                            <div id="formloader">
+                              <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                              <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+                                <animateTransform attributeType="xml"
+                                  attributeName="transform"
+                                  type="rotate"
+                                  from="0 25 25"
+                                  to="360 25 25"
+                                  dur="0.6s"
+                                  repeatCount="indefinite"/>
+                                </path>
+                              </svg>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div><!-- End .hearthero-form-body -->
+            </div><!-- End .hearthero-form-body-container -->
+
+        </div><!-- End .hearthero-form -->
+
+        <footer>
+            
+        </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

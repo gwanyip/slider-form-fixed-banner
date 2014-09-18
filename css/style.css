@@ -1,0 +1,243 @@
+/*
+
+Project: Slide up form
+Date: 9/2014
+Author: Gwan Yip
+
+*/
+/********* Grid *********/
+@import url("skeleton.css");
+/********* Fonts *********/
+@import url("fonts.css");
+/********* Text formatting *********/
+@import url("gridlover.css");
+/********* Variables *********/
+/* Fonts */
+/* Colors */
+/********* Mixins *********/
+/* Webkits */
+/********* Global styles *********/
+body {
+  background: #442A20;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto; }
+
+.hearthero-form .hearthero-form-title,
+.hearthero-form .hearthero-form-body {
+  width: 960px;
+  margin: 0 auto; }
+
+.hearthero-form-title button, .hearthero-form-body .hearthero-form-success button, #agree_submit {
+  border: none;
+  cursor: pointer; }
+
+.agree_submit_loading {
+  opacity: 0.5;
+  pointer: default; }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #DD5626; }
+  .container p {
+    text-align: center;
+    margin: 0; }
+
+/** Form Styles **/
+.hearthero-form-title h3 {
+  display: inline-block;
+  font-size: 25px; }
+.hearthero-form-title button {
+  position: relative; }
+  .hearthero-form-title button.hearthero-form-title-btn-open {
+    background-image: url("../img/hearthero-form-title-btn-open.png");
+    width: 186px;
+    height: 50px;
+    top: 13px;
+    left: 55px; }
+  .hearthero-form-title button.hearthero-form-title-btn-close {
+    background-image: url("../img/hearthero-form-title-btn-close.png");
+    width: 106px;
+    height: 38px;
+    top: 8px;
+    left: 364px; }
+
+.hearthero-form {
+  position: fixed;
+  bottom: 0px;
+  width: 100%; }
+  .hearthero-form h3, .hearthero-form label {
+    color: #fff; }
+  .hearthero-form label {
+    font: bold 18px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin-bottom: 10px;
+    display: inline-block; }
+    .hearthero-form label.error {
+      display: inline-block;
+      position: absolute;
+      font-size: 12px;
+      color: #ff0000;
+      margin: 0; }
+  .hearthero-form .hearthero-form-title-container {
+    background-color: #aa0c1a; }
+  .hearthero-form .hearthero-form-body-container {
+    background-color: #222222;
+    -webkit-transition: all 0.5 ease;
+    -moz-transition: all 0.5 ease;
+    -ms-transition: all 0.5 ease;
+    -o-transition: all 0.5 ease;
+    transition: all 0.5 ease; }
+
+.hearthero-form-body .hearthero-form-success {
+  display: none; }
+  .hearthero-form-body .hearthero-form-success h2 {
+    color: #fff; }
+  .hearthero-form-body .hearthero-form-success .hearthero-form-success-close {
+    background-image: url("../img/hearthero-success-btn-close.png");
+    width: 115px;
+    height: 51px;
+    margin-right: 25px; }
+  .hearthero-form-body .hearthero-form-success .hearthero-form-success-another {
+    background-image: url("../img/hearthero-success-btn-another.png");
+    width: 277px;
+    height: 51px; }
+.hearthero-form-body form {
+  display: none; }
+.hearthero-form-body label, .hearthero-form-body input {
+  display: block; }
+.hearthero-form-body .hearthero-form-application * {
+  display: inline-block; }
+.hearthero-form-body .hearthero-form-application > label + p {
+  left: 103px;
+  display: none; }
+.hearthero-form-body fieldset {
+  border: none; }
+  .hearthero-form-body fieldset > div {
+    display: inline-block;
+    margin-top: 30px; }
+  .hearthero-form-body fieldset:last-child {
+    border-top: 1px solid #424242; }
+.hearthero-form-body .left-col {
+  width: 325px;
+  margin-right: 50px;
+  position: relative;
+  bottom: 30px; }
+  .hearthero-form-body .left-col > div {
+    margin-bottom: 30px;
+    position: relative; }
+.hearthero-form-body .right-col {
+  width: 545px; }
+
+.hearthero-form-name label.error,
+.hearthero-form-email label.error {
+  top: 4px;
+  left: 65px; }
+.hearthero-form-name input,
+.hearthero-form-email input {
+  width: 305px;
+  height: 50px;
+  padding: 0 0 0 20px;
+  font-size: 18px; }
+
+.hearthero-form-story {
+  margin-bottom: 20px;
+  position: relative; }
+  .hearthero-form-story label.error {
+    top: 4px;
+    left: 105px; }
+  .hearthero-form-story textarea {
+    padding: 20px;
+    width: 514px;
+    height: 130px;
+    font-size: 15px; }
+
+.hearthero-form-name input,
+.hearthero-form-email input,
+.hearthero-form-story textarea {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+
+.hearthero-form-application-border {
+  border: 1px solid #333333;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  width: 310px;
+  position: relative; }
+  .hearthero-form-application-border > div {
+    padding: 7px 15px 0px; }
+  .hearthero-form-application-border .hearthero-form-application-student {
+    margin-left: 20px; }
+  .hearthero-form-application-border input[type="radio"] + span:before {
+    content: "";
+    background-image: url("../img/hearthero-form-btn-off.png");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 19px;
+    top: 5px; }
+  .hearthero-form-application-border input[type="radio"]:checked + span:before {
+    background-image: url("../img/hearthero-form-btn-on.png"); }
+
+.hearthero-form-img > label span {
+  font-size: 14px;
+  margin-left: 10px; }
+.hearthero-form-img label:last-child {
+  display: inline-block; }
+.hearthero-form-img input[type="file"] {
+  width: 225px; }
+  .hearthero-form-img input[type="file"] + span:before {
+    content: "";
+    background-image: url("../img/hearthero-form-btn-upload.png");
+    display: inline-block;
+    width: 226px;
+    height: 40px;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+    cursor: pointer; }
+
+#agree_submit {
+  background-image: url("../img/hearthero-form-btn-submit.png");
+  width: 307px;
+  height: 51px;
+  margin-top: 30px;
+  margin-bottom: 35px; }
+
+a.agree_terms {
+  font: 12px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #fff;
+  position: relative;
+  bottom: 15px;
+  left: 25px; }
+
+#formloader {
+  display: none;
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+  vertical-align: top;
+  position: relative;
+  left: 35px;
+  bottom: 6px; }
+
+svg path,
+svg rect {
+  fill: #ff0000; }
+
+.hearthero-form-success-title {
+  padding: 140px 0 130px; }
+  .hearthero-form-success-title h2 {
+    margin: 0; }
+
+.hearthero-form-success-btns {
+  padding-bottom: 60px; }
+
+/*# sourceMappingURL=style.css.map */
